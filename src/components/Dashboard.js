@@ -17,7 +17,7 @@ export default function Dashboard({ user, token, onLogout }) {
   const [viewEntry, setViewEntry] = useState(null);
 
   const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: 'https://pink-journal-backend.onrender.com/api',
     headers: { Authorization: `Bearer ${token}` }
   });
 

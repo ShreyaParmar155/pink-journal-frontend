@@ -10,7 +10,7 @@ export default function Login({ onAuth }) {
   const handleSubmit = async () => {
     setLoading(true); setError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', form);
+      const res = await axios.post('https://pink-journal-backend.onrender.com/api/auth/login', form);
       onAuth(res.data.user, res.data.token);
     } catch (err) {
       setError(err.response?.data?.msg || 'Something went wrong');
