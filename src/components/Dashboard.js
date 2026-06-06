@@ -26,7 +26,7 @@ export default function Dashboard({ user, token, onLogout }) {
     setEntries(res.data);
   };
 
-  useEffect(() => { fetchEntries(); }, []);
+  useEffect(() => { fetchEntries(); }, []); // eslint-disable-line
 
   const handleAdd = async (entry) => {
     const res = await api.post('/entries', entry);
